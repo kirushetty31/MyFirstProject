@@ -1,0 +1,17 @@
+<h1>Welcome to Kiran Website</h1>
+<div class="my-2">
+<label>User Name</label>
+<input type="text" class="form-control" (Input)="onUpdateUser($event)"/>
+<div>{{userName}}</div>
+</div>
+
+
+<button class="btn btn-primary" 
+[disabled]="!allowNewUser"
+(click)="changeUserCreatedStatus()"
+>Add User</button>
+
+<div *ngIf="isUserCreated"> User is Created and User Name {{userName}} </div>
+<app-user></app-user>
+<app-user></app-user>
+<app-user></app-user>
